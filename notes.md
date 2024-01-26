@@ -14,3 +14,17 @@
 
     example : a() - outputs undefined.
                window.a() - outputs global object
+
+# How this reacts in Arrow function ?
+
+Arrow function dont have thier own this context, the value of the this keyword will depend on the enclosed lexical context, if we have and arrow function inside an object literal the value of this will be the global window or object, because it is enclosed in an object which has global scope as it lexical environment.
+
+if we enclosed the arrow function inside a method, it will acts as if it is present in the same method and the value of this will be the object itslef
+
+BECAUSE ARROW FUNCTION DOES NOT HAVE THIER OWN THIS BINDING, THEY RETAIN THE VALUE OF THIS OF ITS LEXICAL CONTEXT
+
+see the example for more clarity
+
+# how this keyword works in DOM?
+
+in DOM it will reference to ITS HTML ellmeent
